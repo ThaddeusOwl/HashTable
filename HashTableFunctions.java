@@ -14,7 +14,10 @@ class HashTableFunctions
    public int hash ( String s )
    {
       int sum = 0;
-      
+      for (int i=0; i<s.length(); i++){
+         sum = (4*sum) + s.charAt(i);
+      }
+      sum = sum % hashTableSize;
       // WRITE YOUR CODE HERE
 
       return sum;
@@ -25,7 +28,12 @@ class HashTableFunctions
    boolean find ( String s )
    {
       boolean found = false;
-      
+      for ( int i=0; i<hashTableSize; i++ ){
+         if(s.equals(hashTableArray[i])){
+            found = true;
+            return found;
+         }
+      }
       // WRITE YOUR CODE HERE
       
       return found;

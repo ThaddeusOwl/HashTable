@@ -50,6 +50,6 @@ class TestHashTable
 
    public static void main ( String [] args )
    {
-      (new TestHashTable ()).run(Integer.valueOf (args[0]));
+      (new TestHashTable ()).run(Integer.valueOf(args[0]));
    }
 }
