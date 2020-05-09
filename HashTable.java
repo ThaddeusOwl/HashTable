@@ -11,6 +11,15 @@ class HashTable
    // include additional functions specified by the user
    HashTableFunctions htf;
    
+   public HashTable (int [] shift) 
+   {
+      hashTableArray = new String [hashTableSize];
+      for ( int i=0; i<hashTableSize; i++ )
+         hashTableArray[i] = "";
+      collisions = 0;
+      htf = new HashTableFunctions (hashTableSize, hashTableArray, shift);
+   }
+   
    // constructor
    public HashTable () 
    {

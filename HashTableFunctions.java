@@ -2,6 +2,14 @@ class HashTableFunctions
 {
    int hashTableSize;
    String [] hashTableArray;
+   int [] shift;
+   
+   public HashTableFunctions ( int size, String [] array, int [] shift)
+   {
+      hashTableSize = size;
+      hashTableArray = array;
+      this.shift = shift;
+   }
    
    // constructor
    public HashTableFunctions ( int size, String [] array )
@@ -15,7 +23,7 @@ class HashTableFunctions
    {
       int sum = 0;
       for (int i=0; i<s.length(); i++){
-         sum = (4*sum) + s.charAt(i);
+         sum = (shift[i]*sum) + s.charAt(i);
       }
       sum = sum % hashTableSize;
       // WRITE YOUR CODE HERE
