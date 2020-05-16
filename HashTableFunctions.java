@@ -16,6 +16,7 @@ class HashTableFunctions
    {
       hashTableSize = size;
       hashTableArray = array;
+      shift = new int[]{1,2,3,4,1,2,3,4,1,2,3,4,1};
    }
 
    // hash function

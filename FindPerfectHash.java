@@ -71,6 +71,7 @@ public class FindPerfectHash{
             System.out.println(L);
          }
       }
+                                             
                                                 
                                           }
                                        }
